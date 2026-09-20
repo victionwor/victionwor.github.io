@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="你好李焕英票房破30亿专题页，记录电影《你好，李焕英》的票房历程、高光时刻、经典台词及幕后故事，展现中国影史里程碑式成就。">
+    <meta name="keywords" content="你好李焕英票房破30亿,你好李焕英,贾玲,票房,电影">
+    <title>你好李焕英票房破30亿 - 影史里程碑与经典回顾</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff6b6b;
+            --secondary-color: #feca57;
+            --text-dark: #2d3436;
+            --text-gray: #636e72;
+            --bg-light: #f7f9fc;
+            --white: #ffffff;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffeaa7 100%);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        .hero h1 .highlight {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        .stat-item h3 {
+            font-size: 36px;
+            color: var(--text-dark);
+            font-weight: 800;
+        }
+
+        .stat-item p {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin: 0;
+        }
+
+        /* Main Content */
+        main {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -17px;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            border-left: 2px solid #eee;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -37px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: var(--white);
+            border: 3px solid var(--primary-color);
+            border-radius: 50%;
+        }
+
+        .timeline-date {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .timeline-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Grid Layout */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .card-img-placeholder {
+            width: 100%;
+            height: 180px;
+            background-color: #ddd;
+            position: relative;
+        }
+        
+        .card-img-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 12px;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .card-link {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .card-link:hover {
+            color: var(--primary-color);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .quote-text {
+            font-size: 24px;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            line-height: 1.5;
+        }
+
+        .quote-author {
+            font-size: 16px;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3436;
+            color: #b2bec3;
+            padding: 50px 0 20px;
+            font-size: 14px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #4b4b4b;
+            padding-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            nav ul {
+                display: none;
+            }
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>影史</span>回眸
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">票房历程</a></li>
+                    <li><a href="#highlights">高光时刻</a></li>
+                    <li><a href="#quotes">经典台词</a></li>
+                    <li><a href="#production">幕后故事</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-badge">中国影史里程碑</div>
+                <h1>你好李焕英票房破30亿</h1>
+                <p>重温这部贾玲导演的处女作，感受跨越时空的母女深情。记录《你好，李焕英》如何从一部小品成长为现象级电影，创造票房奇迹。</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>30.40亿</h3>
+                        <p>总票房成绩</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>2021</h3>
+                        <p>上映年份</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>1</h3>
+                        <p>影史女导演票房冠军</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="container">
+            <div class="section-header">
+                <h2 class="section-title">票房里程碑</h2>
+                <a href="#" style="color: var(--primary-color); font-weight: 600;">查看完整日历 &rarr;</a>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2021年2月12日</div>
+                    <div class="timeline-content">
+                        <h3>大年初一上映</h3>
+                        <p>电影《你好，李焕英》正式登陆全国院线，首日票房即突破2亿，口碑迅速发酵。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2021年3月8日</div>
+                    <div class="timeline-content">
+                        <h3>突破25亿大关</h3>
+                        <p>上映第24天，累计票房突破25亿元，成为当时中国影史票房榜第五名。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2021年3月14日</div>
+                    <div class="timeline-content">
+                        <h3>正式破30亿</h3>
+                        <p>随着电影热度持续攀升，累计票房定格在30.40亿元，超越《哪吒之魔童降世》。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2021年4月</div>
+                    <div class="timeline-content">
+                        <h3>保持票房冠军</h3>
+                        <p>在春节档结束后的长尾期中，该片持续领跑，最终位列中国影史票房榜第三位。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlights Grid -->
+        <section id="highlights" class="container">
+            <div class="section-header">
+                <h2 class="section-title">高光时刻</h2>
+            </div>
+            <div class="grid-3">
+                <article class="card">
+                    <div class="card-img-placeholder">
+                        <img src="https://picsum.photos/seed/movie1/400/250" alt="票房增长曲线">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">数据分析</span>
+                        <h3 class="card-title">春节档逆袭之路</h3>
+                        <p class="card-desc">解析《你好，李焕英》如何从《唐人街探案3》的强势开局中突围，凭借真挚情感实现票房逆袭。</p>
+                        <a href="#" class="card-link">阅读分析 &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img-placeholder">
+                        <img src="https://picsum.photos/seed/movie2/400/250" alt="观众口碑">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">口碑评价</span>
+                        <h3 class="card-title">五项大奖加冕</h3>
+                        <p class="card-desc">盘点电影获得的第34届中国电影金鸡奖最佳喜剧片等五项大奖，肯定其艺术价值与商业成就。</p>
+                        <a href="#" class="card-link">查看奖项 &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img-placeholder">
+                        <img src="https://picsum.photos/seed/movie3/400/250" alt="社会影响">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">社会影响</span>
+                        <h3 class="card-title">引发情感共鸣</h3>
+                        <p class="card-desc">探讨电影为何能引发全年龄段观众共鸣，成为一代人的集体回忆与情感出口。</p>
+                        <a href="#" class="card-link">深度解读 &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section id="quotes" class="quote-section">
+            <div class="container">
+                <p class="quote-text">“我的女儿，我就希望她健康快乐就行。”</p>
+                <p class="quote-author">—— 电影《你好，李焕英》经典台词</p>
+            </div>
+        </section>
+
+        <!-- Production Section -->
+        <section id="production" class="container">
+            <div class="section-header">
+                <h2 class="section-title">幕后与制作</h2>
+            </div>
+            <div class="grid-3">
+                <article class="card">
+                    <div class="card-img-placeholder">
+                        <img src="https://picsum.photos/seed/movie4/400/250" alt="贾玲导演">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">导演手记</span>
+                        <h3 class="card-title">贾玲的十年筹备</h3>
+                        <p class="card-desc">从2016年春晚小品到电影剧本打磨，讲述导演贾玲如何将亲情故事搬上大银幕的过程。</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img-placeholder">
+                        <img src="https://picsum.photos/seed/movie5/400/250" alt="演员阵容">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">演员阵容</span>
+                        <h3 class="card-title">沈腾张小斐的默契</h3>
+                        <p class="card-desc">回顾沈腾、张小斐、陈赫等主演的精彩表演，以及他们在片中展现的化学反应。</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img-placeholder">
+                        <img src="https://picsum.photos/seed/movie6/400/250" alt="服装道具">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">美术设计</span>
+                        <h3 class="card-title">还原80年代风貌</h3>
+                        <p class="card-desc">介绍剧组如何通过服装、道具和场景布置，还原上世纪80年代的沈阳风貌。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="container" style="margin-top: 60px;">
+            <div class="section-header">
+                <h2 class="section-title">常见问题</h2>
+            </div>
+            <div style="background: var(--white); padding: 30px; border-radius: 12px; border-left: 5px solid var(--primary-color);">
+                <h3 style="margin-bottom: 15px; color: var(--text-dark);">Q: 《你好，李焕英》票房破30亿具体是什么时候？</h3>
+                <p style="color: var(--text-gray); margin-bottom: 30px;">A: 根据《你好，李焕英》官方发布的票房数据，该片累计票房在2021年3月14日达到30.40亿元人民币，正式突破30亿大关。</p>
+                
+                <h3 style="margin-bottom: 15px; color: var(--text-dark);">Q: 贾玲凭借这部电影获得了什么成就？</h3>
+                <p style="color: var(--text-gray);">A: 贾玲凭借此片成为中国影史票房最高的女导演，并获得了第34届中国电影金鸡奖最佳喜剧片、最佳导演（提名）等多项荣誉。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于本站</h4>
+                    <p>本站致力于整理和回顾华语电影经典，提供详实的票房数据与背景资料，为影迷提供优质的观影参考。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>相关链接</h4>
+                    <ul>
+                        <li><a href="#">中国电影票房网</a></li>
+                        <li><a href="#">豆瓣电影</a></li>
+                        <li><a href="#">猫眼专业版</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">春节档回顾</a></li>
+                        <li><a href="#">女导演作品</a></li>
+                        <li><a href="#">怀旧经典</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 影史回眸. 保留所有权利. 本页面内容仅供资料整理与回顾。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
