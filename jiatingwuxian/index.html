@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="家庭无线监控摄像机选购指南，提供无线网络摄像头、智能安防摄像机推荐与安装使用教程。">
+    <meta name="keywords" content="家庭无线监控摄像机,无线摄像头,家用监控,智能安防,网络摄像头">
+    <title>家庭无线监控摄像机-智能安防选购与安装指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 3rem 0;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .grid-2 { grid-template-columns: repeat(2, 1fr); }
+            .grid-3 { grid-template-columns: repeat(3, 1fr); }
+            .grid-4 { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-hover);
+        }
+
+        @media (min-width: 768px) {
+            .nav-links { display: flex; }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .tag {
+            background: #dbeafe;
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 99px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        /* Feature Cards */
+        .feature-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .icon-box {
+            width: 48px;
+            height: 48px;
+            background-color: #eff6ff;
+            color: var(--primary-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .icon-box svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Comparison Table */
+        .comparison-wrapper {
+            overflow-x: auto;
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #f1f5f9;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .check-icon {
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .cross-icon {
+            color: #ef4444;
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.25rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background-color: #fff;
+        }
+
+        .faq-question:hover {
+            background-color: #f8fafc;
+        }
+
+        .faq-answer {
+            padding: 0 1.25rem 1.25rem;
+            color: var(--text-secondary);
+            display: none;
+            border-top: 1px solid transparent;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+            border-top-color: var(--border-color);
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e293b;
+            color: #94a3b8;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; }
+        }
+
+        .footer-brand h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #334155;
+            font-size: 0.875rem;
+        }
+
+        /* Utility */
+        .text-center { text-align: center; }
+        .mb-1 { margin-bottom: 1rem; }
+        .mb-2 { margin-bottom: 2rem; }
+        .mt-4 { margin-top: 4rem; }
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+        .section-subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12l5-5m-5 5l5 5"/></svg>
+                家安卫士
+            </a>
+            <nav class="nav-links">
+                <a href="#features">核心功能</a>
+                <a href="#comparison">选购对比</a>
+                <a href="#installation">安装指南</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+            <a href="#comparison" class="cta-button">查看推荐型号</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>家庭无线监控摄像机</h1>
+            <p>全方位守护您的居家安全。从智能侦测到双向语音，我们为您解析如何选择最适合的家庭安防设备。</p>
+            <div class="hero-tags">
+                <span class="tag">AI智能人形识别</span>
+                <span class="tag">双向语音通话</span>
+                <span class="tag">夜视清晰</span>
+                <span class="tag">云端存储</span>
+            </div>
+            <a href="#features" class="cta-button" style="padding: 0.75rem 2rem; font-size: 1.1rem;">了解更多技术特点</a>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section id="features" class="section">
+        <div class="container">
+            <h2 class="section-title">为什么需要家庭无线监控摄像机？</h2>
+            <p class="section-subtitle">现代智能家居安防的核心，为您带来全天候的安全保障与便捷的远程管理体验。</p>
+            
+            <div class="grid-3">
+                <article class="feature-card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>全天候实时监控</h3>
+                    <p>支持1080P或4K高清画质，无论白天黑夜，都能清晰记录家中动态。配备红外夜视功能，在无光环境下依然可见。</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                    </div>
+                    <h3>双向语音通话</h3>
+                    <p>内置高保真麦克风和扬声器。当您在外出时，通过手机APP即可与家中的老人、孩子或宠物实时对话，传递关怀。</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                    </div>
+                    <h3>智能移动侦测</h3>
+                    <p>基于AI算法，精准识别人形、车辆或宠物。只有关键动作触发报警，有效过滤风吹草动，避免无效推送干扰。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Comparison -->
+    <section id="comparison" class="section" style="background-color: #f1f5f9;">
+        <div class="container">
+            <h2 class="section-title">主流类型对比指南</h2>
+            <p class="section-subtitle">根据您的安装环境和需求，选择最合适的无线监控设备类型。</p>
+            
+            <div class="comparison-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>对比维度</th>
+                            <th>普通半球型</th>
+                            <th>枪型/鱼眼型</th>
+                            <th>智能猫眼型</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>安装方式</strong></td>
+                            <td>吸顶安装，适合客厅、卧室</td>
+                            <td>墙壁安装，适合走廊、门口</td>
+                            <td>门后壁挂，替代传统智能门锁</td>
+                        </tr>
+                        <tr>
+                            <td><strong>视角范围</strong></td>
+                            <td>110°-135°广角</td>
+                            <td>固定视角，通常为90°</td>
+                            <td>约120°广角</td>
+                        </tr>
+                        <tr>
+                            <td><strong>适用场景</strong></td>
+                            <td>日常家庭看护</td>
+                            <td>狭窄通道监控、倒车辅助</td>
+                            <td>门口访客确认、快递接收</td>
+                        </tr>
+                        <tr>
+                            <td><strong>语音交互</strong></td>
+                            <td class="cross-icon">不支持</td>
+                            <td class="cross-icon">不支持</td>
+                            <td class="check-icon">支持（需配合智能门锁）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>夜视效果</strong></td>
+                            <td class="check-icon">优秀</td>
+                            <td class="check-icon">优秀</td>
+                            <td class="check-icon">优秀</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Guide -->
+    <section id="installation" class="section">
+        <div class="container">
+            <h2 class="section-title">家庭安装与配置指南</h2>
+            <div class="grid-2">
+                <div>
+                    <h3 style="margin-bottom: 1rem; font-size: 1.25rem;">1. 网络环境准备</h3>
+                    <p style="margin-bottom: 1rem; color: var(--text-secondary);">确保您的家中Wi-Fi信号覆盖良好。无线监控摄像机通常需要2.4GHz频段网络进行连接。建议路由器放置在监控摄像机的信号覆盖范围内，以保证连接稳定。</p>
+                    
+                    <h3 style="margin-bottom: 1rem; font-size: 1.25rem;">2. 供电方式选择</h3>
+                    <p style="margin-bottom: 1rem; color: var(--text-secondary);">选择有线电源连接以获得更稳定的监控体验，避免电池续航焦虑。若必须使用无线供电，请确保选择支持大容量电池且具备低功耗休眠功能的机型。</p>
+                </div>
+                <div style="background-color: #eff6ff; padding: 2rem; border-radius: var(--radius-lg); border: 1px solid #dbeafe;">
+                    <h3 style="margin-bottom: 1rem; font-size: 1.25rem; color: var(--primary-color);">3. APP配置流程</h3>
+                    <ol style="margin-left: 1.5rem; color: var(--text-secondary); list-style-type: decimal;">
+                        <li style="margin-bottom: 0.5rem;">下载对应的官方APP（如米家、小度、萤石等）。</li>
+                        <li style="margin-bottom: 0.5rem;">扫描设备背面的二维码进行配网。</li>
+                        <li style="margin-bottom: 0.5rem;">设置设备名称并创建家庭群组。</li>
+                        <li style="margin-bottom: 0.5rem;">开启移动侦测报警通知。</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section" style="background-color: #f8fafc;">
+        <div class="container">
+            <h2 class="section-title">常见问题解答</h2>
+            <div class="grid-2">
+                <div class="faq-item">
+                    <div class="faq-question">无线监控摄像机会被黑客攻击吗？</div>
+                    <div class="faq-answer">正规品牌的设备通常具备完善的安全加密机制。建议用户在初次设置时修改默认密码，并定期更新固件版本，以保障设备安全。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">需要付费订阅云存储服务吗？</div>
+                    <div class="faq-answer">设备本身免费，但录像存储通常需要订阅云存储套餐。如果不订阅，仅支持本地SD卡存储，且无法通过手机APP随时回看历史录像。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">下雨天能正常使用吗？</div>
+                    <div class="faq-answer">大多数家用无线监控摄像机具备IP66级或IP67级防水防尘等级，适合户外安装。但在极端暴雨天气下，建议检查设备固定情况以防脱落。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何保护个人隐私不被泄露？</div>
+                    <div class="faq-answer">不要将设备安装在与卧室或卫生间等私密空间直接对视的角度。定期检查APP中的用户权限，避免将设备分享给不明身份的陌生人。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>家安卫士</h2>
+                    <p>专注于提供家庭无线监控摄像机的选购指南、技术解析与使用建议。致力于让每一位用户都能轻松构建安全、智能的居家环境。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#features">核心功能</a></li>
+                        <li><a href="#comparison">选购对比</a></li>
+                        <li><a href="#installation">安装教程</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">室内半球机</a></li>
+                        <li><a href="#">室外枪机</a></li>
+                        <li><a href="#">智能猫眼</a></li>
+                        <li><a href="#">婴儿监护</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>support@homeguard.com</li>
+                        <li>400-123-4567</li>
+                        <li>北京市朝阳区科技园</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 家安卫士. All rights reserved. 本站内容仅供参考，不作为购买依据。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 折叠交互
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项状态
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
