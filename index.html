@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>笑意-传递温暖与快乐的情感内容分享平台</title>
+    <meta name="description" content="笑意是一个专注于传递生活正能量、分享治愈系内容与幽默故事的在线平台。在这里发现让你会心一笑的瞬间，阅读暖心故事，感受生活的小确幸，让笑容成为生活的常态。">
+    <meta name="keywords" content="笑意, 幽默, 治愈, 情感故事, 快乐, 治愈系, 网文, 生活感悟">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff6b6b;
+            --secondary-color: #4ecdc4;
+            --accent-color: #ffe66d;
+            --text-main: #2d3436;
+            --text-light: #636e72;
+            --bg-body: #f7f9fc;
+            --bg-card: #ffffff;
+            --spacing-unit: 1rem;
+            --border-radius: 12px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem var(--spacing-unit);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-light);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: #f1f3f5;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 150px;
+            font-size: 0.9rem;
+        }
+
+        .search-box button {
+            background: none;
+            border: none;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff0f0 0%, #f0fff4 100%);
+            padding: 4rem var(--spacing-unit);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '☺';
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.03;
+            top: -50px;
+            left: -50px;
+            transform: rotate(-15deg);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: var(--text-main);
+            border: 1px solid #e0e0e0;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Content Sections */
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title h2 {
+            font-size: 1.5rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .section-title h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 1.2em;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .view-all {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 180px;
+            background-color: #eee;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .card-content {
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+            line-height: 1.4;
+        }
+
+        .card-excerpt {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            flex-grow: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #b2bec3;
+            border-top: 1px solid #f1f3f5;
+            padding-top: 0.8rem;
+        }
+
+        .author-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .author-avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #dfe6e9;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 0.8rem;
+        }
+
+        .topic-list li {
+            margin-bottom: 0.8rem;
+        }
+
+        .topic-list a {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            padding: 0.5rem;
+            border-radius: 6px;
+        }
+
+        .topic-list a:hover {
+            background-color: #f8f9fa;
+            color: var(--primary-color);
+        }
+
+        .topic-count {
+            background-color: #f1f3f5;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+        }
+
+        /* Quote Widget */
+        .quote-widget {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .quote-widget p {
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .quote-widget cite {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-top: 3rem;
+            padding: 2rem var(--spacing-unit);
+            background-color: white;
+            border-radius: var(--border-radius);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 1.5rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            display: none;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--secondary-color);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d3436;
+            color: #b2bec3;
+            padding: 3rem var(--spacing-unit) 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #636e72;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .search-box {
+                width: 100%;
+            }
+
+            .search-box input {
+                width: 100%;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .cta-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span style="font-size: 1.8rem;">😄</span> 笑意
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">治愈故事</a></li>
+                    <li><a href="#">冷笑话集</a></li>
+                    <li><a href="#">生活感悟</a></li>
+                    <li><a href="#">每日一笑</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索快乐...">
+                <button>🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>让笑容成为生活的常态</h1>
+                <p>笑意是一个致力于寻找生活微小确幸的社区。在这里，我们分享温暖的故事、幽默的段子，用欢笑驱散疲惫，用正能量填满你的每一天。</p>
+                <div class="cta-group">
+                    <a href="#latest" class="btn btn-primary">阅读今日推荐</a>
+                    <a href="#submit" class="btn btn-secondary">分享你的快乐</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Left Content -->
+            <div class="main-content">
+                
+                <!-- Featured Section -->
+                <section id="latest" class="section-wrapper">
+                    <div class="section-title">
+                        <h2>精选内容</h2>
+                        <a href="#" class="view-all">查看全部 &rarr;</a>
+                    </div>
+                    <div class="card-grid">
+                        <!-- Card 1 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://picsum.photos/seed/smile1/400/250" alt="治愈插画">
+                                <span class="card-tag">治愈</span>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">午后的阳光与一杯热茶：找回内心的宁静</h3>
+                                <p class="card-excerpt">在这个快节奏的时代，我们常常忘记了慢下来。今天分享一个关于如何在忙碌中寻找片刻安宁的小故事...</p>
+                                <div class="card-footer">
+                                    <div class="author-info">
+                                        <img src="https://picsum.photos/seed/avatar1/50/50" class="author-avatar" alt="Author">
+                                        <span>云朵朵</span>
+                                    </div>
+                                    <span>2小时前</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://picsum.photos/seed/smile2/400/250" alt="幽默场景">
+                                <span class="card-tag">幽默</span>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">当老板问我“这个项目能做吗”时的内心戏</h3>
+                                <p class="card-excerpt">这是一个关于职场生存的搞笑段子。有时候，幽默感是我们最好的保护色，也是化解尴尬的良药。</p>
+                                <div class="card-footer">
+                                    <div class="author-info">
+                                        <img src="https://picsum.photos/seed/avatar2/50/50" class="author-avatar" alt="Author">
+                                        <span>职场小剧场</span>
+                                    </div>
+                                    <span>5小时前</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://picsum.photos/seed/smile3/400/250" alt="温馨生活">
+                                <span class="card-tag">生活</span>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">家里的小猫教会我的道理</h3>
+                                <p class="card-excerpt">有时候，治愈我们的不是宏大的道理，而是身边那些看似微不足道的小生命。它们用最纯粹的快乐感染着我们。</p>
+                                <div class="card-footer">
+                                    <div class="author-info">
+                                        <img src="https://picsum.photos/seed/avatar3/50/50" class="author-avatar" alt="Author">
+                                        <span>喵星人日记</span>
+                                    </div>
+                                    <span>1天前</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Hot Topics / List Style -->
+                <section class="section-wrapper" style="margin-top: 2rem;">
+                    <div class="section-title">
+                        <h2>热门话题</h2>
+                    </div>
+                    <div style="background: white; border-radius: 12px; box-shadow: var(--shadow); overflow: hidden;">
+                        <ul class="topic-list">
+                            <li><a href="#"><span>那些年我们一起追过的冷笑话</span> <span class="topic-count">1.2k</span></a></li>
+                            <li><a href="#"><span>治愈系风景摄影分享</span> <span class="topic-count">856</span></a></li>
+                            <li><a href="#"><span>职场人如何保持好心情</span> <span class="topic-count">742</span></a></li>
+                            <li><a href="#"><span>生活中的小确幸收集</span> <span class="topic-count">620</span></a></li>
+                            <li><a href="#"><span>周末宅家看电影指南</span> <span class="topic-count">531</span></a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section class="faq-section">
+                    <div class="section-title">
+                        <h2>关于笑意</h2>
+                    </div>
+                    <div class="faq-list">
+                        <div class="faq-item active">
+                            <div class="faq-question">
+                                笑意是什么类型的网站？
+                                <span class="faq-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                笑意是一个专注于情感内容、幽默段子和生活感悟的分享平台。我们旨在通过文字和图片，为用户提供轻松、愉悦的阅读体验，帮助缓解压力，传递正能量。
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                我可以投稿吗？
+                                <span class="faq-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                当然可以！我们非常欢迎用户分享自己的原创故事、摄影作品或搞笑段子。点击页面上的“分享你的快乐”按钮即可了解投稿详情。
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                内容都是原创的吗？
+                                <span class="faq-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                大部分内容为用户投稿和精选分享，同时也包含部分经过授权的优质转载内容。我们尊重每一位创作者的版权。
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside class="sidebar">
+                <!-- Quote Widget -->
+                <div class="sidebar-widget quote-widget">
+                    <p>“生活就像一面镜子，你对它笑，它就对你笑。”</p>
+                    <cite>—— 佚名</cite>
+                </div>
+
+                <!-- Ranking Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">本周热门榜</h3>
+                    <ol style="counter-reset: hot-counter; padding-left: 1.5rem;">
+                        <li style="margin-bottom: 1rem; position: relative;">
+                            <span style="position: absolute; left: -1.5rem; top: 2px; font-weight: bold; color: var(--primary-color);">1</span>
+                            <a href="#" style="font-size: 0.95rem; font-weight: 500;">猫咪的迷惑行为大赏</a>
+                        </li>
+                        <li style="margin-bottom: 1rem; position: relative;">
+                            <span style="position: absolute; left: -1.5rem; top: 2px; font-weight: bold; color: var(--secondary-color);">2</span>
+                            <a href="#" style="font-size: 0.95rem; font-weight: 500;">那个让我笑出腹肌的段子</a>
+                        </li>
+                        <li style="margin-bottom: 1rem; position: relative;">
+                            <span style="position: absolute; left: -1.5rem; top: 2px; font-weight: bold; color: #b2bec3;">3</span>
+                            <a href="#" style="font-size: 0.95rem; font-weight: 500;">独处是治愈的开始</a>
+                        </li>
+                        <li style="margin-bottom: 1rem; position: relative;">
+                            <span style="position: absolute; left: -1.5rem; top: 2px; font-weight: bold; color: #b2bec3;">4</span>
+                            <a href="#" style="font-size: 0.95rem; font-weight: 500;">假如生活欺骗了你</a>
+                        </li>
+                        <li style="position: relative;">
+                            <span style="position: absolute; left: -1.5rem; top: 2px; font-weight: bold; color: #b2bec3;">5</span>
+                            <a href="#" style="font-size: 0.95rem; font-weight: 500;">搞笑视频集锦</a>
+                        </li>
+                    </ol>
+                </div>
+
+                <!-- Newsletter Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">订阅每日一笑</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 1rem;">每天早上8点，将快乐送达你的邮箱。</p>
+                    <input type="email" placeholder="请输入您的邮箱" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 0.5rem; outline: none;">
+                    <button class="btn btn-primary" style="width: 100%; font-size: 0.9rem;">立即订阅</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于笑意</h4>
+                <p style="font-size: 0.9rem; line-height: 1.6;">
+                    笑意致力于打造一个纯粹、温暖的线上社区。我们相信，每一个微笑都有力量，每一个故事都值得被倾听。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>探索</h4>
+                <ul>
+                    <li><a href="#">最新发布</a></li>
+                    <li><a href="#">热门榜单</a></li>
+                    <li><a href="#">分类浏览</a></li>
+                    <li><a href="#">作者专区</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>帮助</h4>
+                <ul>
+                    <li><a href="#">使用指南</a></li>
+                    <li><a href="#">投稿说明</a></li>
+                    <li><a href="#">版权声明</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关注我们</h4>
+                <ul>
+                    <li><a href="#">微信公众号</a></li>
+                    <li><a href="#">微博动态</a></li>
+                    <li><a href="#">小红书笔记</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 笑意平台. All Rights Reserved. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Interaction
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                // Close other open items (optional, for accordion effect)
+                document.querySelectorAll('.faq-item').forEach(child => {
+                    if (child !== parent) child.classList.remove('active');
+                });
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Simple Search Interaction
+        const searchBtn = document.querySelector('.search-box button');
+        const searchInput = document.querySelector('.search-box input');
+        
+        searchBtn.addEventListener('click', () => {
+            if(searchInput.value.trim()) {
+                alert('正在搜索：' + searchInput.value);
+            }
+        });
+
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && searchInput.value.trim()) {
+                alert('正在搜索：' + searchInput.value);
+            }
+        });
+    </script>
+</body>
+                              </html>
