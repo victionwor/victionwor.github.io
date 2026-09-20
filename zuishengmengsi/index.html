@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="醉生梦死异界行 - 沉浸式玄幻小说阅读平台，提供最新章节、精彩剧情解析及作者互动社区。">
+    <meta name="keywords" content="醉生梦死异界行,玄幻小说,异界穿越,小说阅读,在线阅读">
+    <title>醉生梦死异界行 - 沉浸式玄幻阅读与剧情解析</title>
+    <style>
+        :root {
+            --primary-color: #8a2be2; /* 靛蓝紫 */
+            --secondary-color: #4b0082; /* 靛青 */
+            --accent-color: #ff007f; /* 洋红 */
+            --bg-dark: #0f0f13;
+            --bg-card: #1a1a24;
+            --text-main: #ffffff;
+            --text-muted: #a0a0b0;
+            --border-color: #2d2d3d;
+            --font-serif: "Songti SC", "SimSun", serif;
+            --font-sans: "PingFang SC", "Microsoft YaHei", sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 顶部导航 */
+        header {
+            background-color: rgba(15, 15, 19, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(15, 15, 19, 0.7), rgba(75, 0, 130, 0.6)), url('https://picsum.photos/seed/dream/1920/1080') center/cover no-repeat;
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        h1 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            background: linear-gradient(to right, #fff, #b0c4de);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-desc {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 35px;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(138, 43, 226, 0.6);
+        }
+
+        /* 内容区块 */
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        /* 最新章节列表 */
+        .chapter-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .chapter-item {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: border-color 0.3s;
+        }
+
+        .chapter-item:hover {
+            border-color: var(--primary-color);
+        }
+
+        .chapter-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .chapter-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .chapter-link {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* 卡片网格 */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            border-color: var(--primary-color);
+        }
+
+        .card-img {
+            height: 180px;
+            width: 100%;
+            background-color: #333;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-tag {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            background: rgba(138, 43, 226, 0.1);
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* 番外/设定集 */
+        .lore-section {
+            background-color: #15151a;
+            padding: 60px 0;
+            margin-top: 60px;
+        }
+
+        .lore-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .lore-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .lore-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .lore-text p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .lore-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .lore-list li::before {
+            content: '✦';
+            color: var(--accent-color);
+            margin-right: 10px;
+        }
+
+        .lore-visual {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lore-visual::after {
+            content: 'WORLD BUILDING';
+            font-size: 3rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.1);
+            letter-spacing: 5px;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #0a0a0c;
+            padding: 40px 0;
+            border-top: 1px solid var(--border-color);
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 15px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .copyright {
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        /* 动画 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                height: 400px;
+            }
+            
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">醉生梦死<span>异界行</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#chapters">最新章节</a></li>
+                    <li><a href="#world">世界观</a></li>
+                    <li><a href="#community">读者社区</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h1>醉生梦死异界行</h1>
+                <p class="hero-desc">
+                    在这破碎的诸天万界中，梦境是唯一的真实，也是通往巅峰的唯一钥匙。跟随主角穿越轮回，在醉意与清醒的边缘，揭开世界的终极秘密。
+                </p>
+                <a href="#chapters" class="cta-button">开始阅读</a>
+            </div>
+        </section>
+
+        <!-- 最新章节 -->
+        <section id="chapters" class="container" style="padding: 60px 20px;">
+            <h2 class="section-title">最新章节</h2>
+            <div class="chapter-list">
+                <article class="chapter-item">
+                    <div class="chapter-info">
+                        <h3>第 1205 章：旧日之影的苏醒</h3>
+                        <div class="chapter-meta">更新于：2023-10-24 20:00 | 分类：主线剧情</div>
+                    </div>
+                    <a href="#" class="chapter-link">阅读全文 &rarr;</a>
+                </article>
+                <article class="chapter-item">
+                    <div class="chapter-info">
+                        <h3>第 1204 章：梦境深处的低语</h3>
+                        <div class="chapter-meta">更新于：2023-10-23 18:30 | 分类：支线任务</div>
+                    </div>
+                    <a href="#" class="chapter-link">阅读全文 &rarr;</a>
+                </article>
+                <article class="chapter-item">
+                    <div class="chapter-info">
+                        <h3>第 1203 章：界域崩塌的前兆</h3>
+                        <div class="chapter-meta">更新于：2023-10-22 22:15 | 分类：世界观展开</div>
+                    </div>
+                    <a href="#" class="chapter-link">阅读全文 &rarr;</a>
+                </article>
+                <article class="chapter-item">
+                    <div class="chapter-info">
+                        <h3>第 1202 章：酒馆里的神秘客</h3>
+                        <div class="chapter-meta">更新于：2023-10-21 16:45 | 分类：角色互动</div>
+                    </div>
+                    <a href="#" class="chapter-link">阅读全文 &rarr;</a>
+                </article>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="#" class="cta-button" style="background: transparent; border: 1px solid var(--primary-color); color: var(--primary-color);">查看全部章节</a>
+            </div>
+        </section>
+
+        <!-- 世界观与设定 -->
+        <section id="world" class="lore-section">
+            <div class="container lore-container">
+                <div class="lore-visual"></div>
+                <div class="lore-text">
+                    <h3>世界观设定：醉梦诸天</h3>
+                    <p>《醉生梦死异界行》构建了一个宏大而诡谲的多元宇宙。在这里，现实与虚幻的界限被打破。主角并非单纯的穿越者，而是背负着“清梦”使命的行者。</p>
+                    <ul class="lore-list">
+                        <li><strong>梦境权柄：</strong> 每个人都能在梦中获得力量，但过度沉溺者将沦为梦魇的傀儡。</li>
+                        <li><strong>三界体系：</strong> 醒时界（凡俗）、醉时界（权谋）、梦时界（本源）。</li>
+                        <li><strong>核心冲突：</strong> 为了阻止“无梦之夜”的到来，主角必须在各个界域中收集散落的“清醒之酒”。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 精彩片段与推荐 -->
+        <section class="container" style="padding: 60px 20px;">
+            <h2 class="section-title">精选片段与推荐</h2>
+            <div class="grid-layout">
+                <article class="card">
+                    <img src="https://picsum.photos/seed/fantasy1/400/250" alt="场景插图" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">名场面</span>
+                        <h3 class="card-title">决战紫禁之巅：酒神降临</h3>
+                        <p class="card-text">当最后的一滴清醒酒入喉，主角的灵力瞬间突破桎梏，这一战，不仅是为了生存，更是为了证明梦境的尊严。</p>
+                        <div class="card-footer">
+                            <span>热度：98%</span>
+                            <span>5.0分</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/fantasy2/400/250" alt="角色插图" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">角色分析</span>
+                        <h3 class="card-title">配角：暗夜酒馆的老板娘</h3>
+                        <p class="card-text">她总是微笑着倒酒，却无人知晓她背后的沉重过往。她是连接各个世界的枢纽，也是主角最坚实的后盾。</p>
+                        <div class="card-footer">
+                            <span>热度：92%</span>
+                            <span>4.8分</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/fantasy3/400/250" alt="概念插图" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">设定科普</span>
+                        <h3 class="card-title">什么是“清醒之酒”？</h3>
+                        <p class="card-text">一种只存在于传说中的灵液，饮用后可让人在梦中保持一丝清明，是抵抗梦魇侵蚀的唯一解药。</p>
+                        <div class="card-footer">
+                            <span>热度：88%</span>
+                            <span>4.9分</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 读者互动/FAQ -->
+        <section id="community" class="container" style="padding: 60px 20px;">
+            <h2 class="section-title">读者问答与互动</h2>
+            <div style="background-color: var(--bg-card); padding: 30px; border-radius: 10px; border: 1px solid var(--border-color);">
+                <details style="margin-bottom: 15px; cursor: pointer;">
+                    <summary style="font-weight: bold; color: var(--primary-color); list-style: none;">主角为什么要一直喝酒？</summary>
+                    <p style="margin-top: 10px; color: var(--text-muted); padding-left: 20px; border-left: 3px solid var(--accent-color);">酒是主角在梦境世界中伪装自己的面具，也是他保存记忆和力量的媒介。只有在微醺的状态下，他才能看到常人看不到的“暗线”。</p>
+                </details>
+                <details style="margin-bottom: 15px; cursor: pointer;">
+                    <summary style="font-weight: bold; color: var(--primary-color); list-style: none;">后续剧情会走向哪里？</summary>
+                    <p style="margin-top: 10px; color: var(--text-muted); padding-left: 20px; border-left: 3px solid var(--accent-color);">目前剧情已揭开“无梦之夜”的序幕，主角将前往传说中的“起源之地”，寻找终结这一切的方法。</p>
+                </details>
+                <details style="cursor: pointer;">
+                    <summary style="font-weight: bold; color: var(--primary-color); list-style: none;">如何参与同人或讨论？</summary>
+                    <p style="margin-top: 10px; color: var(--text-muted); padding-left: 20px; border-left: 3px solid var(--accent-color);">欢迎加入我们的官方读者群（群号：XXXXX），参与每周的剧情预测活动，优秀预测者可获得实体周边奖励。</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">版权声明</a>
+                <a href="#">读者协议</a>
+                <a href="#">联系作者</a>
+            </div>
+            <p class="copyright">&copy; 2023 醉生梦死异界行阅读网. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+</html>
