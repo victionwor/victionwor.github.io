@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="腔棘鱼专题页，提供腔棘鱼科普知识、生存环境、历史发现、濒危状况及保护措施等全面信息，带你深入了解这种活化石的神秘世界。">
+    <meta name="keywords" content="腔棘鱼, 活化石, 深海生物, 淡水腔棘鱼, 濒危物种, 印度洋, 科普">
+    <title>腔棘鱼-深海活化石的神秘世界与保护现状</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #004d40;
+            --secondary-color: #00695c;
+            --accent-color: #ff6f00;
+            --text-dark: #263238;
+            --text-light: #546e7a;
+            --bg-light: #f5f7fa;
+            --white: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, rgba(0, 77, 64, 0.9), rgba(0, 105, 92, 0.8)), url('https://picsum.photos/seed/coleoptera/1600/900.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--accent-color);
+            color: var(--white);
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #e65100;
+            transform: translateY(-2px);
+        }
+
+        /* Introduction Section */
+        .intro {
+            padding: 4rem 0;
+            background-color: var(--white);
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .intro-text h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-text p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .intro-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 4rem 0;
+            background-color: var(--bg-light);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        /* History Timeline */
+        .history {
+            padding: 4rem 0;
+            background-color: var(--white);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: var(--secondary-color);
+            opacity: 0.3;
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            border-left: none;
+            border-right: 4px solid var(--accent-color);
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* Species Comparison */
+        .comparison {
+            padding: 4rem 0;
+            background-color: var(--bg-light);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            box-shadow: var(--shadow);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .comparison-table th {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 4rem 0;
+            background-color: var(--white);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-dark);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            margin-top: 1rem;
+            color: var(--text-light);
+            display: none;
+            padding-left: 1rem;
+            border-left: 2px solid var(--secondary-color);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 3rem 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+            text-decoration: underline;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                margin-left: 20px;
+            }
+
+            .timeline-content {
+                width: 100%;
+                border-left: none;
+                border-top: 4px solid var(--accent-color);
+            }
+
+            .timeline-item:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .timeline-item:nth-child(even) .timeline-content {
+                border-top: none;
+                border-right: none;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span>◆</span> 腔棘鱼百科
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#intro">物种简介</a></li>
+                    <li><a href="#history">发现历程</a></li>
+                    <li><a href="#species">物种分类</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>腔棘鱼：深海中的活化石</h1>
+                <p>探索这种在地球上生存了超过 3 亿年的神秘鱼类，了解它们如何在恐龙时代幸存至今，以及现代科学对它们的最新发现。</p>
+                <a href="#intro" class="btn">开始探索</a>
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section id="intro" class="intro">
+            <div class="container">
+                <div class="intro-grid">
+                    <div class="intro-text">
+                        <h2>什么是腔棘鱼？</h2>
+                        <p>腔棘鱼（学名：Latimeria）是一类古老的硬骨鱼，被认为是现存的“活化石”。它们在地球上生存的历史可以追溯到三叠纪时期，比恐龙还要早出现。</p>
+                        <p>腔棘鱼通常体型较大，体表覆盖着坚硬的鳞片，拥有独特的肉质鳍，能够像四肢一样支撑身体移动。过去，人们普遍认为腔棘鱼早在白垩纪末期的大灭绝中已经灭绝，直到现代才重新被发现。</p>
+                        <p>目前，腔棘鱼主要分为两个现存物种：<strong>拉蒂迈鱼</strong>（印度洋）和<strong>多鰭鱼</strong>（西太平洋）。它们主要栖息在深海热液喷口附近，对环境变化非常敏感。</p>
+                    </div>
+                    <div class="intro-image">
+                        <img src="https://picsum.photos/seed/fish/600/400.jpg" alt="腔棘鱼标本示意图">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features -->
+        <section class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>腔棘鱼的独特特征</h2>
+                    <p>这三种特征使其成为生物进化史上的奇迹</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">🧬</div>
+                        <h3>基因古老</h3>
+                        <p>腔棘鱼的基因组与鱼类祖先非常相似，保留了许多原始的遗传特征，为科学家研究脊椎动物进化提供了宝贵的样本。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🐟</div>
+                        <h3>独特的呼吸方式</h3>
+                        <p>它们拥有独特的肉质叶状胸鳍和腹鳍，内部骨骼结构与四足动物的四肢非常相似，是研究陆生动物起源的关键。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🌊</div>
+                        <h3>深海栖息者</h3>
+                        <p>大多数腔棘鱼生活在深海区域，通常在 200 米到 1000 米的水深之间，依靠敏锐的嗅觉和视觉在黑暗中捕食。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Timeline -->
+        <section id="history" class="history">
+            <div class="container">
+                <div class="section-title">
+                    <h2>发现历程：从灭绝到复活</h2>
+                    <p>人类对腔棘鱼认知的曲折历史</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <span class="timeline-date">1938年12月22日</span>
+                            <h3>南非发现</h3>
+                            <p>在南非东伦敦的码头，博物馆馆长玛乔丽·拉蒂迈偶然发现了一条从未见过的深蓝色、带有淡红色斑点的鱼。这就是著名的“拉蒂迈鱼”。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <span class="timeline-date">1952年</span>
+                            <h3>确认物种</h3>
+                            <p>另一位科学家史密斯博士确认，这条鱼属于腔棘鱼目，并证明这种鱼在地球上已经灭绝了 7000 万年。这一发现震惊了世界。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <span class="timeline-date">1997-1998年</span>
+                            <h3>印度尼西亚发现</h3>
+                            <p>科学家在印度尼西亚的苏门答腊和爪哇岛附近的海域，发现了另一种腔棘鱼。经过 DNA 分析，确认其为新物种——多鰭鱼。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Species Comparison -->
+        <section id="species" class="comparison">
+            <div class="container">
+                <div class="section-title">
+                    <h2>现存物种对比</h2>
+                    <p>两种腔棘鱼的基本特征对比</p>
+                </div>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>特征</th>
+                            <th>拉蒂迈鱼 (印度洋)</th>
+                            <th>多鰭鱼 (西太平洋)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>学名</td>
+                            <td>Latimeria chalumnae</td>
+                            <td>Latimeria menadoensis</td>
+                        </tr>
+                        <tr>
+                            <td>发现地点</td>
+                            <td>科摩罗群岛附近海域</td>
+                            <td>印度尼西亚苏拉威西岛附近海域</td>
+                        </tr>
+                        <tr>
+                            <td>体色</td>
+                            <td>深蓝黑色，带有淡红色斑点</td>
+                            <td>黑褐色，带有蓝色或绿色斑点</td>
+                        </tr>
+                        <tr>
+                            <td>体型</td>
+                            <td>可达 1.6 米</td>
+                            <td>可达 2 米</td>
+                        </tr>
+                        <tr>
+                            <td>保护状况</td>
+                            <td>极危 (CR)</td>
+                            <td>易危 (VU)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">腔棘鱼真的已经灭绝了吗？</div>
+                        <div class="faq-answer">
+                            <p>并不是。虽然化石记录显示它们在白垩纪末期消失，但 1938 年在南非重新发现活体后，又于 1990 年代在印度尼西亚发现了另一个种群。因此，它们并非灭绝，而是处于极度濒危状态。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">为什么腔棘鱼被称为“活化石”？</div>
+                        <div class="faq-answer">
+                            <p>因为它们的身体结构和生理特征与 3 亿多年前的化石非常相似，几乎没有发生显著的进化变化，这使它们成为了研究生物进化的“活标本”。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">腔棘鱼可以在 aquarium（水族馆）中饲养吗？</div>
+                        <div class="faq-answer">
+                            <p>目前世界上极少数水族馆成功饲养过腔棘鱼，且饲养难度极高，对水质和温度要求苛刻。因此，大多数公众只能通过纪录片或图片了解它们。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">腔棘鱼吃什么？</div>
+                        <div class="faq-answer">
+                            <p>腔棘鱼是肉食性鱼类，主要捕食深海中的鱼、鱿鱼和其他甲壳类动物。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于腔棘鱼</h4>
+                    <p>致力于普及深海生物知识，保护海洋生态环境，让更多人了解这位“深海老者”的生存现状。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#intro">物种简介</a></li>
+                        <li><a href="#history">发现历史</a></li>
+                        <li><a href="#species">物种分类</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关资源</h4>
+                    <ul>
+                        <li><a href="#">海洋保护组织</a></li>
+                        <li><a href="#">深海探索报告</a></li>
+                        <li><a href="#">古生物学研究</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 腔棘鱼百科. 保留所有权利. 本站内容仅供科普教育使用.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 交互逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他已打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
